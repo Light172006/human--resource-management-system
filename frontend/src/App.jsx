@@ -8,6 +8,17 @@ import Login from "./pages/Login";
 import EmployeeDashboard from "./pages/EmployeeDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 
+// Add this temporarily near the top of App.jsx, remove before demo
+import * as authService from "./services/authService";
+import * as attendanceService from "./services/attendanceService";
+import * as leaveService from "./services/leaveService";
+import * as payrollService from "./services/payrollService";
+
+window.authService = authService;
+window.attendanceService = attendanceService;
+window.leaveService = leaveService;
+window.payrollService = payrollService;
+
 export default function App() {
   useEffect(() => {
     seedDatabase(); // runs once, only seeds if localStorage is empty
