@@ -1,0 +1,142 @@
+{
+  "users": [
+    {
+      "id": "emp001",
+      "name": "Riya Sharma",
+      "email": "employee1@demo.com",
+      "password": "demo1234",
+      "role": "employee",
+      "jobTitle": "Software Engineer",
+      "department": "Engineering",
+      "phone": "9876543210",
+      "address": "Kolkata, India",
+      "salary": 65000
+    },
+    {
+      "id": "emp002",
+      "name": "Aman Roy",
+      "email": "employee2@demo.com",
+      "password": "demo1234",
+      "role": "employee",
+      "jobTitle": "QA Engineer",
+      "department": "Engineering",
+      "phone": "9123456780",
+      "address": "Howrah, India",
+      "salary": 55000
+    },
+    {
+      "id": "adm001",
+      "name": "Priya Das",
+      "email": "admin@demo.com",
+      "password": "admin1234",
+      "role": "admin",
+      "jobTitle": "HR Manager",
+      "department": "Human Resources",
+      "phone": "9988776655",
+      "address": "Kolkata, India",
+      "salary": 90000
+    }
+  ],
+
+  "loginResponses": {
+    "employee1@demo.com": {
+      "token": "mock-jwt-emp001",
+      "user": {
+        "id": "emp001",
+        "name": "Riya Sharma",
+        "role": "employee",
+        "email": "employee1@demo.com"
+      }
+    },
+    "admin@demo.com": {
+      "token": "mock-jwt-adm001",
+      "user": {
+        "id": "adm001",
+        "name": "Priya Das",
+        "role": "admin",
+        "email": "admin@demo.com"
+      }
+    }
+  },
+
+  "attendance": {
+    "emp001": [
+      {
+        "date": "2026-07-04",
+        "checkIn": "09:05",
+        "checkOut": "18:02",
+        "status": "present"
+      },
+      {
+        "date": "2026-07-03",
+        "checkIn": "09:15",
+        "checkOut": "17:50",
+        "status": "present"
+      },
+      {
+        "date": "2026-07-02",
+        "checkIn": null,
+        "checkOut": null,
+        "status": "absent"
+      }
+    ],
+    "emp002": [
+      {
+        "date": "2026-07-04",
+        "checkIn": "09:30",
+        "checkOut": "13:00",
+        "status": "half-day"
+      }
+    ]
+  },
+
+  "attendanceAll": [
+    { "employeeId": "emp001", "name": "Riya Sharma", "date": "2026-07-04", "status": "present" },
+    { "employeeId": "emp002", "name": "Aman Roy", "date": "2026-07-04", "status": "half-day" }
+  ],
+
+  "leave": {
+    "emp001": [
+      {
+        "id": "leave001",
+        "employeeId": "emp001",
+        "type": "sick",
+        "startDate": "2026-07-10",
+        "endDate": "2026-07-11",
+        "remarks": "Fever",
+        "status": "pending"
+      }
+    ],
+    "emp002": []
+  },
+
+  "leaveAll": [
+    {
+      "id": "leave001",
+      "employeeId": "emp001",
+      "employeeName": "Riya Sharma",
+      "type": "sick",
+      "startDate": "2026-07-10",
+      "endDate": "2026-07-11",
+      "remarks": "Fever",
+      "status": "pending"
+    }
+  ],
+
+  "payroll": {
+    "emp001": {
+      "employeeId": "emp001",
+      "basic": 40000,
+      "hra": 15000,
+      "allowances": 10000,
+      "total": 65000
+    },
+    "emp002": {
+      "employeeId": "emp002",
+      "basic": 34000,
+      "hra": 12000,
+      "allowances": 9000,
+      "total": 55000
+    }
+  }
+}
